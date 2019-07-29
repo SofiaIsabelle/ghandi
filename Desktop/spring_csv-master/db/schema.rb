@@ -24,3 +24,6 @@ ActiveRecord::Schema.define(version: 20190729021443) do
   end
 
 end
+
+
+#pushing commit

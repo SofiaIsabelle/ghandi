@@ -24,3 +24,5 @@ class Contact < ApplicationRecord
   end
 
 end
+
+#pushing commit
