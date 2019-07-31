@@ -1,6 +1,12 @@
 class Contact < ApplicationRecord
   require 'csv'
 
+    validates :uid, presence: true, length: {minimum: 5, maximum: 5 }
+    validates :phone, presence: true, length: {minimum: 10, maximum: 11}
+    validates :first, presence: true, length: {minimum: 3, maximum: 55}
+    validates :last, presence: true, length: {minimum: 2, maximum: 55}
+    validates :email, presence: true, length: {minimum: 5, maximum: 320}
+
   def self.import(file_path)
     CSV.foreach(file_path, headers: true) do |row|
       contact_hash = row.to_hash
